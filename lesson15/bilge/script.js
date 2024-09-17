@@ -175,8 +175,12 @@ console.log(paragraph.replaceAll('dog',  'cat'));
 // 20. Extract a Substring (H)
 // Extract the price and currency from a string below using "slice" method and print it to console. Should return "9.99 USD"
 const planPriceString = 'Premium plan - 9.99 USD/month.';
-const indexPriceString = planPriceString.indexOf('9.99 USD');
-
+const indexStartPrice = planPriceString.indexOf('9.99 USD');
+const findIt = '9.99 USD';
+const indexEndPrice = indexStartPrice + findIt.length;
 console.log('Ex. 20:');
-console.log(indexPriceString); /* I used this variable which calculates the starting position of '9.99 USD' expression automatically without having the need to counting each letter manually */
-console.log(planPriceString.slice(15,23));
+console.log(indexStartPrice); /* I used this variable which calculates the starting position of '9.99 USD' expression automatically without having the need to counting each letter manually */
+
+
+console.log(planPriceString.slice(15,23)); // This is the previous solution, but I wanted to keep it in order to compare it with the new solution and turns out they are the same! // 
+console.log(planPriceString.slice(indexStartPrice, indexEndPrice));
