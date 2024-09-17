@@ -53,7 +53,7 @@ console.log(isFirstLetterUpperCase(''));
 console.log(isFirstLetterUpperCase('Write a function that'));
 
 // 5. Write a function that takes in a number and checks if it's positive, negative, or zero using if else statement. (H)
-function isPositiveorNegative(num) {
+function isPositiveOrNegative(num) {
 	if (num > 0) {
 		return 'Number is positive';
 	} else if (num < 0) {
@@ -62,9 +62,9 @@ function isPositiveorNegative(num) {
 		return 'You entered 0';
 	}
 }
-console.log(isPositiveorNegative(5));
-console.log(isPositiveorNegative(0));
-console.log(isPositiveorNegative(-5));
+console.log(isPositiveOrNegative(5));
+console.log(isPositiveOrNegative(0));
+console.log(isPositiveOrNegative(-5));
 // 6. Write a function that takes in a year and checks if it's a leap year (is divisible by 4 and not divisible by 100 OR divisible by 400) or not using if else statement. (H)
 function isLeapYear(year) {
 	if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
@@ -123,24 +123,24 @@ console.log(checkAge(32));
 If the age is between 18 and 65 (inclusive) and the user is not a student, print "You are eligible to vote".
  If the age is greater than 65, print "You are a senior citizen".
  If the user is a student but their age is greater than or equal to 18, print "You are old enough to vote". (H)*/
-function voteAge(age, isStudent) {
-	if (age < 18 && isStudent === 'yes') {
+function checkVotingAge(age, isStudent) {
+	if (age < 18 && isStudent) {
 		return 'You are a student and not old enough to vote';
-	} else if ((age >= 18 && age <= 65) && isStudent !== 'yes') {
+	} else if ((age >= 18 && age <= 65) && !isStudent ) {
 		return 'You are eligible to vote';
-	} else if (age >= 18 && isStudent === 'yes') {
+	} else if (age >= 18 && isStudent) {
 		return 'You are old enough to vote';
 	} else {
 		return 'You are a senior citizen';
 	}
 
 }
-console.log(voteAge(32, yes));
+console.log(checkVotingAge(32, yes));
 // 11. Write a function that asks the user to enter their salary and their years of experience. 
 //If the salary is less than $30,000 and the years of experience are less than 5, print "Sorry, we cannot offer you the job at this time". 
 //If the salary is less than $50,000 and the years of experience are between 5 and 10 (inclusive), print "We can offer you the job at a lower salary". 
 //If the salary is greater than or equal to $50,000 or the years of experience are greater than or equal to 10, print "We can offer you the job at the requested salary". (H)
-function jobExperinceandSalary(salary, experience) {
+function evaluateJobOffer(salary, experience) {
 	if (salary < 30000 && experience < 5) {
 		console.log('Sorry, we cannot offer you the job at this time');
 	} else if (salary < 50000 && (experience >= 5 && experience <= 10)) {
@@ -150,13 +150,13 @@ function jobExperinceandSalary(salary, experience) {
 	}
 }
 
-console.log(jobExperinceandSalary(50000, 8));
+console.log(evaluateJobOffer(50000, 8));
 // 12. Write a function that asks the user to enter their score on a test.
 // If the score is less than 60, print "You failed the test".
 // If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great".
 // If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". 
 //If the score is greater than 90, print "You got an A+ - Great job!". (H)
-function scoresResult(score) {
+function checkScore(score) {
 	if (score < 60) {
 		return 'You failed the test';
 	} else if (score >= 60 && score <= 70) {
@@ -169,10 +169,10 @@ function scoresResult(score) {
 		return 'You got an A+ - Great job!';
 	}
 }
-console.log(scoresResult(100));
+console.log(checkScore(100));
 // 13. Write a function that asks the user to enter a month number (1-12) and displays the corresponding season name.
 // Use a switch statement to handle the different cases. (H)
-function seasonNames(monthNumber) {
+function getSeasonNames(monthNumber) {
 	switch (monthNumber) {
 		case 1:
 		case 2:
@@ -196,12 +196,12 @@ function seasonNames(monthNumber) {
 
 	}
 }
-console.log(seasonNames(6));
+console.log(getSeasonNames(6));
 // 14. Write a function that asks the user to enter a grade letter (A, B, C, D, or F) and 
 //displays a message indicating whether the grade is passing (A, B, C) or failing (D, F).
 // Use a switch statement to handle the different cases. (H)
-function gradeLetter(letter) {
-	const upperLetter = le.toUpperCase();
+function checkGrade(letter) {
+	const upperLetter = letter.toUpperCase();
 	switch (upperLetter) {
 		case 'A':
 		case 'B':
@@ -215,7 +215,7 @@ function gradeLetter(letter) {
 
 	}
 }
-console.log(gradeLetter('a'));
+console.log(checkGrade('a'));
 // 15. Write a function that asks the user to enter their age, and then calculates and displays their age in 
 //dog years (where one human year is equivalent to seven dog years).
 // If the user enters a negative number or zero, display an error message. (H)
