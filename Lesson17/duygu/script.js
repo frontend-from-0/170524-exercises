@@ -12,7 +12,7 @@ for (let i = 1; i < 21; i = i + 2) {
 console.log('- - - - - - - - - - - - - - - - - ');
 // 3. (H) Write a loop that prints out the even numbers from 1 to 20.
 // 2, 4, 6...
-for (let i = 0; i < 21; i = i + 2) {
+for (let i = 2; i < 21; i = i + 2) { //fixed
     console.log(i);
 }
 console.log('- - - - - - - - - - - - - - - - - ');
@@ -44,19 +44,18 @@ console.log('- - - - - - - - - - - - - - - - - ');
 const string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 let reversedString = "";
 
-
 for (let i = string.length - 1; i >= 0; i--) {
-  reversedString = reversedString + string[i];
+  reversedString += string[i];
 }
 
 console.log('The reverse of this string is: ' + reversedString);
 
 console.log('- - - - - - - - - - - - - - - - - ');
 // 7. (H) Write a while loop that counts from 10 to 1 and prints out each number.
-let i=1;
-while(i<10){
-    console.log(i);
-    i++;
+let d=10;
+while(d>0){
+    console.log(d);
+    d--;
 }
 console.log('- - - - - - - - - - - - - - - - - ');
 // 8. (H) Write a while loop that generates random numbers between 1 and 10 until a number greater than 8 is generated, and then prints out the total number of iterations.
