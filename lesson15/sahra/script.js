@@ -89,25 +89,20 @@ console.log(sentence.replace('bad', 'good'));
 
 // 11. Repeat a String (H)
 // Create a visual separator for console output. Expected result: "--------------------"
-
-console.log("--------------------");
+const separator = "-"
+console.log(`${separator.repeat(20)}`);
 
 // 12. Check if String Starts With (H)
 // Check if a file name starts with a specific prefix. Return true or false.
 const fileName = 'report_2024.pdf';
-const searchPrefix = 'report';
-const startsWith = fileName.indexOf(searchPrefix) === 0;
-console.log(startsWith);
+console.log(fileName.startsWith('report'));
 
 console.log("--------------------");
 
 // 13. Check if String Ends With (H)
 // Check if a file name ends with a specific extension. Return true or false.
 const fileName2 = 'report_2024.pdf';
-const searchExt = '.pdf';
-// i didnt understand the Ex12-13s logic, tried to do them with function if-else statements but it didnt work.
-const endsWith = fileName2.lastIndexOf(searchExt) === (fileName2.length - searchExt.length);
-console.log(endsWith);
+console.log(fileName2.endsWith('pdf'));
 
 console.log("--------------------");
 
@@ -144,7 +139,8 @@ console.log("--------------------");
 // Reverse the characters in a string. Use sentence2 variable from exercise above.
 
 const reverse = characters.reverse();
-console.log(reverse);
+const resultEx18 =reverse.join("");
+console.log(resultEx18);
 
 console.log("--------------------");
 
@@ -159,5 +155,6 @@ console.log("--------------------");
 // 20. Extract a Substring (H)
 // Extract the price and currency from a string below using "slice" method and print it to console. Should return "9.99 USD"
 const planPriceString = 'Premium plan - 9.99 USD/month.';
-const newPlan = planPriceString.slice(15,23);
-console.log(newPlan);
+const indexOfPrice = planPriceString.indexOf(9);
+const resultEx19 = indexOfPrice + '9.99 USD'.length;
+console.log(planPriceString.slice(`${indexOfPrice}`,resultEx19));
