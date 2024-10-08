@@ -122,7 +122,7 @@ console.log(spltWords);
 I couldnt find any methods. I looked up w3schools and mdn website. 
 ı thought that ı can use for loop but not sure thats what you want me to do.
 */
-//From Anna :)
+
 const arrayOfCharacters = sentence2.split('');
 const reversedArrayOfCharacters = arrayOfCharacters.reverse();
 const reversedString = reversedArrayOfCharacters.join('');
@@ -136,5 +136,6 @@ console.log(updatededVersionofParagraph);
 // 20. Extract a Substring (H)
 // Extract the price and currency from a string below using "slice" method and print it to console. Should return "9.99 USD"
 const planPriceString = 'Premium plan - 9.99 USD/month.';
+
 const justPrice=planPriceString.slice(15,23);//ı thought i will slice end of the sentence thanks :)
 console.log(justPrice);
