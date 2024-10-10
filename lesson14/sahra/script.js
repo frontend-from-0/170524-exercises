@@ -126,9 +126,9 @@ console.log('------------------------');
 
 // 12. Declare two variables named `a` and `b` and initialize them to 2 and 3, respectively.
 // Use the prefix ++ operator to increment the value of `a` by 1, then add `b` to the result and log it to the console.
-const a = 2;
+let a = 2;
 const b = 3;
-let resultEx12 = (++a + b);
+const resultEx12 = (++a + b);
 
 console.log(resultEx12);
 
