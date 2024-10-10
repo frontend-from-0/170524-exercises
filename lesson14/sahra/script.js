@@ -118,9 +118,9 @@ console.log('------------------------');
 
 // 11. Declare a variable named `numberEx11` and initialize it to -3.
 // Use the prefix ++ operator to increment the value of `numberEx11` by 1, then multiply the result by 2 and log it to the console.
-const numberEx11 = -3;
+let numberEx11 = -3;
 numberEx11++;
-let resultEx11 = (numberEx11 + 1) * 2;
+const resultEx11 = numberEx11 * 2;
 console.log(resultEx11);
 console.log('------------------------');
 
@@ -128,9 +128,9 @@ console.log('------------------------');
 // Use the prefix ++ operator to increment the value of `a` by 1, then add `b` to the result and log it to the console.
 const a = 2;
 const b = 3;
-let result = (++a + b);
+let resultEx12 = (++a + b);
 
-console.log(result);
+console.log(resultEx12);
 
 console.log('------------------------');
 
