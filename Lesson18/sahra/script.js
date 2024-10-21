@@ -21,8 +21,8 @@ function numbers(myArr){
   let sum = 0;
   for(let i=0; i < myArr.length; i++){
     sum += myArr[i];
-    sum /= myArr.length;
   }
+  sum /= myArr.length;
   return sum;
 }
 const example2 = [4,8,12,20];
@@ -84,7 +84,8 @@ const testArrayEx6 = [1, 2, 3, 4, 2];
 function value(myArr){  
   let arrayEx6 = []
   for(let i=0; i < myArr.length; i++){
-  if(myArr[i] !== 2){
+    let valueToRemove = 2;
+  if(myArr[i] !== valueToRemove){
     arrayEx6.push(myArr[i]);
   }
   }
