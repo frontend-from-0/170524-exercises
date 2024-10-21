@@ -81,17 +81,16 @@ console.log('----------------------------');
 // Input: ([1, 2, 3, 4, 2], 2)
 // Output: [1, 3, 4]
 const testArrayEx6 = [1, 2, 3, 4, 2];
-function value(myArr){  
+function removeFromArray(array, valueToRemove){ 
   let arrayEx6 = []
   for(let i=0; i < myArr.length; i++){
-    let valueToRemove = 2;
   if(myArr[i] !== valueToRemove){
     arrayEx6.push(myArr[i]);
   }
   }
   return arrayEx6;
 }
-const resultEx6 = value(testArrayEx6);
+const resultEx6 = value(testArrayEx6,2);
 console.log(resultEx6);
 
 console.log('----------------------------');
