@@ -73,7 +73,7 @@ square2.describeShape();
 // that logs a message to the console indicating that the vehicle has started.
 // Then create a Car class that extends the Vehicle class and adds a numWheels property. 
 //Override the start() method in the Car class to log a different message to the console indicating that the car has started.
-class Car{
+class Vehicle{
   constructor(make,model,year){
     this._make=make;
     this._model=model;
@@ -83,7 +83,7 @@ class Car{
     console.log(`${this._make} ${this._model} (${this._year}) has started.`);
   }
 }
-class vehicle extends Car{
+class Car extends Vehicle{
   constructor(make,model,year,numWheels){
       super(make,model,year);
       this._numWheels=numWheels;
@@ -114,7 +114,7 @@ class BankAccount{
   deposit(amount){
     this._balance+=amount;
     this._transactionHistory.push({
-      type: "withdrawal",
+      type: "deposit",
       amount: amount,
       date: new Date().toLocaleDateString()
     });
