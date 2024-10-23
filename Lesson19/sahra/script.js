@@ -94,7 +94,6 @@ class Car extends Vehicle {
 }
 const car1= new Vehicle('Chevrolet', 'Impala', 1967);
 car1.start();
-console.log(car1);
 
 const car2= new Car('Chevrolet', 'Impala', 1967,4);
 car2.start();
@@ -104,15 +103,94 @@ car2.start();
 // 4. Create a BankAccount class with balance and interestRate properties, and deposit() and withdraw() methods. Add a transactionHistory property that is an array of objects representing each transaction made on the account, with properties for type (either "deposit" or "withdrawal"), amount, and date ({type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}). Implement deposit() and withdraw() methods that add new transactions to the transactionHistory array. Implement a get transactionHistory() getter method that returns a copy of the transaction history array, and a get currentBalance() getter method that calculates and returns the current balance of the account based on the transaction history.
 
 class BankAccount {
+    constructor(balance, interestRate) {
+      this._balance = balance;
+      this._interestRate = interestRate;
+      this._transactionHistory = [];
+    }
+  
+    deposit(amount) {
+      if (amount > 0) {
+        this._balance += amount;
+        this._transactionHistory.push({
+          type: "deposit",
+          amount: amount,
+          date: new Date().toLocaleDateString(),
+        });
+        console.log(`A deposit of ${amount} has been made to your account.`);
+      }
+    }
+  
+    withdraw(amount) {
+      if (amount > 0 && this._balance >= amount) {
+        this._balance -= amount;
+        this._transactionHistory.push({
+          type: "withdrawal",
+          amount: amount,
+          date: new Date().toLocaleDateString(),
+        });
+        console.log(`A withdrawal of ${amount} has been made from your account.`);
+      } else {
+        console.log("Insufficient funds for this withdrawal.");
+      }
+    }
+  
+    get transactionHistory() {
+      return [...this._transactionHistory];
+    }
+  
+    get currentBalance() {
+      return this._balance;
+    }
+  }
+  
+  const myAccount = new BankAccount(100, 10);
+  
+  myAccount.deposit(50);
+  
+  myAccount.withdraw(20);
+  
+  console.log("Current balance:", myAccount.currentBalance);
+  
+  console.log("Transaction history:", myAccount.transactionHistory);
+  /*Hi Anna first i tried to write like codes above this line than i didn't understand what does the interestRate does than tried to rewrite like this but it didn't work can you tell me why?
+
+  
+   class BankAccount {
 constructor(balance,interestRate){
     this._balance=balance;
     this._interestRate=interestRate;
+    this._transactionHistory=[];
+    
 } 
 deposit(){
-
+if (this._interestRate){
+    this._balance= (this._balance / 100 * this._interestRate) + this._balance;
+    const amount= this._balance / 100 * this._interestRate;
+    this._transactionHistory.push(
+        {type: "deposit", amount: amount, date: new Date().toLocaleDateString()}
+    )
+    console.log(`There has been made a ${this._transactionHistory} to your account`);
+}
 }
 withDraw(){
+    if (this._interestRate){
+        this._balance= this._balance - (this._balance / 100 * this._interestRate);
+        const amount= this._balance / 100 * this._interestRate;
+        this._transactionHistory.push(
+            {type: "withdrawal", amount: amount, date: new Date().toLocaleDateString()}
+        )
+        console.log(`There has been made a ${this._transactionHistory} to your account`);
+    }
+}
+get transactionHistory(){
+    return this._transactionHistory;
+}
+get currentBalance(){
+    return this._balance;
+}
+}
 
-}
-}
-//I'm sorry Anna I didn't understand this exercises requirements plus have no idea how to do it more than this...
+const newDeposit = new BankAccount(30,10);
+newDeposit.deposit();
+*/
