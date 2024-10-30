@@ -121,6 +121,9 @@ console.log('------------------------');
 let numberEx11 = -3;
 numberEx11++;
 const resultEx11 = numberEx11 * 2;
+const numberEx11 = -3;
+numberEx11++;
+let resultEx11 = (numberEx11 + 1) * 2;
 console.log(resultEx11);
 console.log('------------------------');
 
@@ -131,6 +134,11 @@ const b = 3;
 const resultEx12 = (++a + b);
 
 console.log(resultEx12);
+const a = 2;
+const b = 3;
+let result = (++a + b);
+
+console.log(result);
 
 console.log('------------------------');
 
@@ -139,4 +147,5 @@ console.log('------------------------');
 // `Math.random()` generates a random number between 0 and 1 (not including 1).
 
 const random = Math.floor(Math.random() * (10)) + 50;
+console.log(random);
 console.log(random);
