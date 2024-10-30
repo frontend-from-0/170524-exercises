@@ -41,7 +41,7 @@ console.log(compareNumbers(1, 50));
 // 4. Write a function that takes in a string and checks if the first letter is uppercase using if else statement.
 function isFirstLetterUpperCase(string) {
 	const firstLetter = string.charAt(0); // string[0]
-  if (string.length <= 0 || typeof string === 'String') return 'Invalid input value';
+  if (string.length <= 0 || typeof string === 'string') return 'Invalid input value';
 
 	if (firstLetter === firstLetter.toUpperCase()) {
 		return true;
