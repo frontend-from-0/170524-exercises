@@ -5,14 +5,14 @@ for (let i = 1; i < 11; i++) {
 }
 
 for (let i = 1; i < 21; i = i + 2) {
-  console.log(i)
+  console.log(i);
 }
 console.log('- - - - - - - - - - - - - - - - - ');
 // 2. (H) Write a loop that prints out the odd numbers from 1 to 20.
 // 1,3,5,7...
 
 for (let i = 1 ; i <= 20; i=i+2){
-  console.log(i++)
+  console.log(i);
 }
 
 console.log('- - - - - - - - - - - - - - - - - ');
@@ -20,7 +20,7 @@ console.log('- - - - - - - - - - - - - - - - - ');
 // 2, 4, 6...
 
 for (let i = 0 ; i <= 20; i=i+2) {
-  console.log(i++)
+  console.log(i++);
 }
 
 
