@@ -67,7 +67,7 @@ li:last-child {
 
 .completed {
   text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.4;
   color: red;
 }
 

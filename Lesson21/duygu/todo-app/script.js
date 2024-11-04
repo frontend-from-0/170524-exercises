@@ -39,5 +39,6 @@ if(todoInputElement.value.trim() !== ''){
       }
     );
   };
+  todoInputElement.value = '';
 
   });
