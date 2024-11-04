@@ -7,25 +7,25 @@ document
     //task3
 if(todoInputElement.value.trim() !== ''){
     const toDoListItemElement = document.createElement("li"); // Node
-    toDoListItemElement.textContent = todoInputElement.value;
+    
+    
 //task2
     const textElement = document.createElement('span');
-    textElement.addEventListener('click', function() {
-      textElement.style.textDecoration = 'line-through';
-      textElement.style.color = 'red';
-    });
+    textElement.textContent = todoInputElement.value;
    
-    
-
-    const toDoListElement = document.getElementById("toDoList");
-    toDoListElement.appendChild(toDoListItemElement);
-
-    toDoListElement.addEventListener(
-      'click',
+    textElement.addEventListener(
+      'click', 
       function() {
-        toDoListElement.classList.toggle('completed');
-      }
-    )
+      textElement.classList.toggle('completed');
+    });
+
+    toDoListItemElement.appendChild(textElement);
+  //task4
+  todoInputElement.value = '';
+
+  const toDoListElement = document.getElementById("toDoList");
+  toDoListElement.appendChild(toDoListItemElement);
+    
 
     //task1
     const deleteButtonElement = document.createElement('button');
@@ -39,6 +39,6 @@ if(todoInputElement.value.trim() !== ''){
       }
     );
   };
-  todoInputElement.value = '';
+
 
   });
