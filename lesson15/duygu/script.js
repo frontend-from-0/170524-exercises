@@ -25,9 +25,8 @@ console.log(sentenseCapitalized);
 // 3. Convert to Lowercase (H)
 // Normalize email addresses for comparison. Expected result: "user@example.com"
 const email2 = 'USER@EXAMPLE.COM';
-console.log(email2.toLowerCase());
-console.log(email2);
-
+let lowerEmail = email2.toLowerCase();
+console.log(lowerEmail);
 // 4. Extract a Substring
 // Use the `slice` method to extract 'Debugging code' from the string below.
 const sentenceToSlice =
@@ -71,10 +70,8 @@ if (firstName.indexOf('Jane') === -1) {
 // Find the position of a word 'JavaScript' in a sentence.
 const sentenceWithAWordToFind =
 	"The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.";
-  const searchTerm = 'Javascript';
-  const indexOfFirst = sentenceWithAWordToFind.indexOf(searchTerm);
-  console.log(indexOfFirst);
-
+const findTheJavascript=sentenceWithAWordToFind.indexOf("JavaScript");
+console.log(findTheJavascript);
 // 9. Extract a Substring
 // Extract the domain from an email address.
 const email = 'user-name@google.com';
@@ -89,72 +86,56 @@ console.log(sentence.replace('bad', 'good'));
 
 // 11. Repeat a String (H)
 // Create a visual separator for console output. Expected result: "--------------------"
-const separator = "-"
-console.log(`${separator.repeat(20)}`);
-
+const separator = "-".repeat(20);
+console.log(separator);
 // 12. Check if String Starts With (H)
 // Check if a file name starts with a specific prefix. Return true or false.
 const fileName = 'report_2024.pdf';
-console.log(fileName.startsWith('report'));
-
-console.log("--------------------");
-
+console.log(fileName.startsWith('repo'));
 // 13. Check if String Ends With (H)
 // Check if a file name ends with a specific extension. Return true or false.
-const fileName2 = 'report_2024.pdf';
-console.log(fileName2.endsWith('pdf'));
-
-console.log("--------------------");
-
+console.log(fileName.endsWith('fdp'));
 // 14. Pad Start of String (H)
 // Pad a number with zeros using padStart() function to ensure it has at least 5 digits.
 const number = '42';
-console.log(number.padStart(5, '0'));
-
-console.log("--------------------");
-
+const startsWithZero=number.padStart(5,'0');
+console.log(startsWithZero);
 // 15. Pad End of String (H)
 // Pad a text with spaces to align it to the right. Expected result: "Align     "
 const text = 'Align';
-console.log(text.padEnd(10));
-
-console.log("--------------------");
-
+const addSpaces=text.endsWith(5,' ')
+console.log(addSpaces);
 // 16. Split a String (H)
 // Split a sentence into words.
 const sentence2 = 'Learning JavaScript is fun';
-const words = sentence2.split(' ');
-console.log(words);
-
-console.log("--------------------");
-
+const spltSentences=sentence2.split(' ');
+console.log(spltSentences);
 // 17. Convert String to Array of Characters (H)
 // Convert a string into an array of its characters. Use sentence2 variable from exercise above.
-const characters = sentence2.split('');
-console.log(characters);
-
-console.log("--------------------");
+const spltWords=sentence2.split('');
+console.log(spltWords);
 
 // 18. Reverse a String (H)
 // Reverse the characters in a string. Use sentence2 variable from exercise above.
 
-const reverse = characters.reverse();
-const resultEx18 =reverse.join("");
-console.log(resultEx18);
+/*
+I couldnt find any methods. I looked up w3schools and mdn website. 
+ı thought that ı can use for loop but not sure thats what you want me to do.
+*/
 
-console.log("--------------------");
+const arrayOfCharacters = sentence2.split('');
+const reversedArrayOfCharacters = arrayOfCharacters.reverse();
+const reversedString = reversedArrayOfCharacters.join('');
+
 
 // 19. Replace All Occurrences of a Substring (H)
 // Replace all instances of a word 'dog' in a text.
 const paragraph = "I think Ruth's dog is cuter than your dog!";
-const newParagraph = paragraph.replaceAll('dog', 'cat');
-console.log(newParagraph);
-
-console.log("--------------------");
-
+const updatededVersionofParagraph=paragraph.replace(/dog/g,'cat');
+console.log(updatededVersionofParagraph);
 // 20. Extract a Substring (H)
 // Extract the price and currency from a string below using "slice" method and print it to console. Should return "9.99 USD"
 const planPriceString = 'Premium plan - 9.99 USD/month.';
-const indexOfPrice = planPriceString.indexOf(9);
-const resultEx19 = indexOfPrice + '9.99 USD'.length;
-console.log(planPriceString.slice(`${indexOfPrice}`,resultEx19));
+
+const justPrice=planPriceString.slice(15,23);//ı thought i will slice end of the sentence thanks :)
+console.log(justPrice);
