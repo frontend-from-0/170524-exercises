@@ -118,17 +118,20 @@ console.log('------------------------');
 
 // 11. Declare a variable named `numberEx11` and initialize it to -3.
 // Use the prefix ++ operator to increment the value of `numberEx11` by 1, then multiply the result by 2 and log it to the console.
-let numberEx11 = -3;
+const numberEx11 = -3;
+numberEx11++;
 let resultEx11 = (numberEx11 + 1) * 2;
 console.log(resultEx11);
 console.log('------------------------');
 
 // 12. Declare two variables named `a` and `b` and initialize them to 2 and 3, respectively.
 // Use the prefix ++ operator to increment the value of `a` by 1, then add `b` to the result and log it to the console.
-let a = 2;
+const a = 2;
 const b = 3;
-const resultEx12 = (++a + b);
-console.log(resultEx12);
+let result = (++a + b);
+
+console.log(result);
+
 console.log('------------------------');
 
 // BONUS: Generate a random number in a range from 0 (excluding) to 10 (including).
@@ -136,5 +139,4 @@ console.log('------------------------');
 // `Math.random()` generates a random number between 0 and 1 (not including 1).
 
 const random = Math.floor(Math.random() * (10)) + 50;
-console.log(random);
 console.log(random);
