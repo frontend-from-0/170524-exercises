@@ -29,11 +29,11 @@ function findAvgOfAllElements(array) {
   for (let i = 0; i < array.length; i++) {
     sum1 += array[i];    // This part comes from the previous example
   }
-    
-  let avg = sum1 / array.length;
+
+  const avg = sum1 / array.length; // changed 'let' to 'const' as suggested //
   return avg;
 }
-  
+
 console.log("Exercise 2: ");
 
 console.log(findAvgOfAllElements([1, 2, 3, 4]));
@@ -117,12 +117,12 @@ console.log(getNewArray(testArrayEx6, 2));
 // Output: ["name", "age", "city"]
 const testObjEx7 = { name: "John", age: 30, city: "New York" };
 
-function findKeysAsAnArray (object) {
-  let text = [];
-  for (let obj in object) {
-    text.push(obj);
+function getObjectKeys (object) {
+  let objectKeys = [];
+  for (let key in object) {
+    objectKeys.push(key);
   }
-  return text;
+  return objectKeys;
 }
 
 console.log("Exercise 7: ");
@@ -153,18 +153,11 @@ console.log(findValuesOfObject(testObjEx8));
 // Output: false
 const testObjEx9 = { name: "John", age: 30, city: "New York" };
 
-function findIfKeyExists (object, key) {
-  if (object.hasOwnProperty(key) === true) {    //checks if that key exists in the object and returns 'true' if that's the case
-    return true;
-  } else {
-  return false;
-  }
-}
-
 console.log("Exercise 9: ");
 
-console.log(findIfKeyExists(testObjEx9, "age"));
-console.log(findIfKeyExists(testObjEx9, "surname"));
+console.log(testObjEx9.hasOwnProperty("age")); // deleted the findIfKeyExist function //
+
+console.log(testObjEx9.hasOwnProperty("surname"));
 
 // 10. Write a function that takes an object and a key-value pair, and adds the key-value pair to the object.
 // Input: ({name: "John", age: 30}, "city", "New York")
@@ -172,7 +165,7 @@ console.log(findIfKeyExists(testObjEx9, "surname"));
 const testObjEx10 = { name: "John", age: 30 };
 
 function addKeyValuePair (obj, key, value) {
-  if (obj.hasOwnProperty(key) === false) {    //checks if that key does not exist in the object, and adds the key-value pair to the object
+  if (!obj.hasOwnProperty(key)) {
     obj[key] = value;
   } 
   return obj;
@@ -188,7 +181,7 @@ console.log(addKeyValuePair(testObjEx10, "city", "New York"));
 const testObjEx11 = { name: "John", age: 30, city: "New York" };
 
 function removeKeyValuePair (obj, key) {
-  if (obj.hasOwnProperty(key) === true) {   //checks if the key exists in the object and the proceeds to remove that key from the object
+  if (obj.hasOwnProperty(key)) {   //checks if the key exists in the object and the proceeds to remove that key from the object
     delete obj[key];
   } 
   return obj;
