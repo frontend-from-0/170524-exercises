@@ -127,7 +127,7 @@ function getObjectKeys (object) {
 
 console.log("Exercise 7: ");
 
-console.log(findKeysAsAnArray(testObjEx7));
+console.log(getObjectKeys(testObjEx7));
 
 // 8. Write a function that takes an object and returns the values as an array.
 // Input: {name: "John", age: 30, city: "New York"}
