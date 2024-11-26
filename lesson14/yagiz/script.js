@@ -119,7 +119,10 @@ console.log('------------------------');
 
 // 12. Declare two variables named `a` and `b` and initialize them to 2 and 3, respectively.
 // Use the prefix ++ operator to increment the value of `a` by 1, then add `b` to the result and log it to the console.
-
+let a = 2;
+const b = 3;
+++a;
+console.log(a+b);
 console.log('------------------------');
 
 // BONUS: Generate a random number in a range from 0 (excluding) to 10 (including).
