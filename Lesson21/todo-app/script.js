@@ -1,22 +1,23 @@
-document
-  .getElementById("todoForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const todoInputElement = document.getElementById("todoInput");
-    console.log(todoInputElement.value);
+document.getElementById("todoForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    const toDoListItemElement = document.createElement("li"); // Node
-    toDoListItemElement.textContent = todoInputElement.value;
+  const todoInput = document.getElementById("todoInput").value;
+  const toDoList = document.getElementById("toDoList");
+  const listItem = document.createElement("li");
+  const checkbox = document.createElement("main");
+  checkbox.className = "checkbox";
 
-    
-
-    const toDoListElement = document.getElementById("toDoList");
-    toDoListElement.appendChild(toDoListItemElement);
-
-    toDoListElement.addEventListener(
-      'click',
-      function() {
-        toDoListElement.classList.toggle('completed');
-      }
-    );
+  checkbox.addEventListener("click", function () {
+  checkbox.classList.toggle("checked");
+  listItem.classList.toggle("completed");
   });
+
+  
+  const text = document.createElement("span");
+  text.textContent = todoInput;
+  listItem.appendChild(checkbox);
+  listItem.appendChild(text);
+  toDoList.appendChild(listItem);
+
+  document.getElementById("todoInput").value = "";
+});
