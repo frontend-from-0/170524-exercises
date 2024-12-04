@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+:root{
+  --rose-quartz:#F2BCBA;
+  --charcoal-black:#202221;
+  --beige-mist:#EFE1C7;
+  --checked-icon:#efe1c783;
+  --remove-icon:#2c2d2c;
+}
+body {
+  margin: 0;
+  background: linear-gradient(90deg, var(--rose-quartz), var(--beige-mist));
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--charcoal-black);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--beige-mist);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input[type="text"]{
+  flex: 1;
+  padding: 0px 10px 0px 10px;
+  font-size: 16px;
+
+}
+.todo-form-item{
+  background: transparent;
+  color: var(--beige-mist);
+  margin-bottom: 10px;
+  border: 1px solid var(--beige-mist);
+  border-radius: 1px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--beige-mist);
+  color: var(--charcoal-black);
+  border: none;
+  border-radius: 5px;
+  margin: 0px;
+  cursor: pointer;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+li {
+  border-bottom: 1px solid var(--beige-mist);
+  background-color: var(--charcoal-black);
+  color: var(--beige-mist);
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  height: 45px;
+  list-style: none;
+  font-size: 16px;
+  padding: 12px 8px 12px 50px;
+  margin-top: 8px;
+}
+ul li:last-child {
+border-bottom: none;
+}
+ul li::before {
+content: '';
+position: absolute;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-image: url(images/cancel.png);
+background-size: cover;
+background-position: center;
+left: 8px;
+top: 4px;
+}
+
+ul li.completed {
+  text-decoration: line-through;
+  color:var(--checked-icon);
+}
+
+ul li.completed::before {
+ background-image: url(images/check.png);
+}
+ul li span{
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  font-size: 29px;
+  color: var(--checked-icon);
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: var(--remove-icon);
+  color: var(--beige-mist);
+}
