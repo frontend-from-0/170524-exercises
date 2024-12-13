@@ -1,4 +1,4 @@
-// 1. Write a function that takes an array of integers and returns the sum of all elements.
+1. Write a function that takes an array of integers and returns the sum of all elements.
 // Input: [1, 2, 3, 4]
 // Output: 10
 const integersEx1 = [1, 2, 3, 4];
