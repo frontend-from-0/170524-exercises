@@ -7,7 +7,7 @@ const sumResult = firstNumber + secondNumber;
 
 console.log('Exercise 1:');
 console.log(sumResult);
-console.log('------------------------');
+
 // 2. Declare a variable named `userName` and initialize it to your name as a string.
 // Declare a variable named `userAge` and initialize it to your age as a number.
 // Declare a variable named `greetingPhrase` and initialize it to the string "Hello, world!".
@@ -16,20 +16,12 @@ const userName = 'Yagiz';
 const userAge = 17;
 const greetingPhrase = 'Hello, world!';
 console.log('Exercise 2:');
-console.log(
-	greetingPhrase +
-		' My name is ' +
-		userName +
-		". I'm " +
-		userAge +
-		' years old.',
-);
+console.log(greetingPhrase + ' My name is ' +	userName + ". I'm " +	userAge +	' years old.');
 
+console.log('Exercise 2:');
 console.log(
 	`${greetingPhrase} My name is ${userName}. I\'m ${userAge} years old.`,
 );
-
-console.log('------------------------');
 
 // 3. Declare a variable named `dividend` and initialize it to 10.
 // Declare a variable named `divisor` and initialize it to 3.
@@ -41,9 +33,8 @@ const divisor = 3;
 const divisionResult = dividend / divisor;
 const differenceResult = dividend - divisor;
 
+console.log('Exercise 3:');
 console.log(divisionResult, differenceResult);
-
-console.log('------------------------');
 
 // 4. Declare a variable named `firstName` and initialize it to your first name as a string.
 // Declare a variable named `lastName` and initialize it to your last name as a string.
@@ -68,7 +59,6 @@ const multiplicationResult = firstFactor * secondFactor;
 
 console.log('Exercise 5:');
 console.log(multiplicationResult);
-console.log('------------------------');
 
 // 6. Declare a variable named `PI` and initialize it to the value of PI (3.14159). Use the built-in function `Math.PI`.
 
@@ -80,6 +70,8 @@ console.log('------------------------');
 let counter = 0;
 const step = 1;
 
+console.log('Exercise 7:');
+
 console.log((counter = counter + step));
 
 console.log(counter++);
@@ -87,7 +79,6 @@ console.log(counter++);
 console.log((counter += step)); // counter = counter + step;
 
 console.log(++counter);
-console.log('------------------------');
 
 // 8. Declare a variable named `initialTemperature` and initialize it to 20.
 // Increase the value of `initialTemperature` by 5 and log the result to the console.
@@ -95,48 +86,52 @@ console.log('------------------------');
 let initialTemperature = 20;
 const temperatureStep = 5;
 
-console.log((initialTemperature = initialTemperature + temperatureStep));
-
 console.log('Exercise 8:');
-console.log('------------------------');
+console.log((initialTemperature = initialTemperature + temperatureStep));
 
 // 9. Declare a variable named `numberEx9` and initialize it to 6.
 // Declare a variable named `incrementedNumber` and initialize it to `++numberEx9` (numberEx9 incremented using the prefix ++ operator).
 // Log both values to the console.
-const numberEx9=6;
-let incrementedNumber=++numberEx9;
-console.log(numberEx9);
-console.log(incrementedNumber);
-console.log('------------------------');
+
+let numberEx9 = 6;
+let incrementedNumber = ++numberEx9;
+
+console.log('Exercise 9:');
+console.log(incrementedNumber, numberEx9);
 
 // 10. Declare a variable named `numberEx10` and initialize it to 8.
 // Declare a variable named `postIncrementedNumber` and initialize it to `numberEx10++` (numberEx10 incremented using the postfix ++ operator).
 // Log both values to the console.
-const numberEx10=6;
-let postIncrementedNumber=numberEx10++;
-console.log(numberEx10);
-console.log(postIncrementedNumber);
-console.log('------------------------');
+
+let numberEx10 = 8;
+let postIncrementedNumber = numberEx10++;
+
+console.log('Exercise 10:');
+console.log(postIncrementedNumber, numberEx10);
 
 // 11. Declare a variable named `numberEx11` and initialize it to -3.
 // Use the prefix ++ operator to increment the value of `numberEx11` by 1, then multiply the result by 2 and log it to the console.
 let numberEx11 = -3;
 let result = (numberEx11 + 1) * 2;
+
+console.log('Exercise 11:');
 console.log(result);
-console.log('------------------------');
 
 // 12. Declare two variables named `a` and `b` and initialize them to 2 and 3, respectively.
 // Use the prefix ++ operator to increment the value of `a` by 1, then add `b` to the result and log it to the console.
-let a=2;
-const b=3;
-a++;
-const result12=b+a;
-console.log(result12);
-console.log('------------------------');
+
+let a = 2;
+let b =3;
+let inc = ++a;
+
+console.log('Exercise 12:');
+console.log(inc + b);
 
 // BONUS: Generate a random number in a range from 0 (excluding) to 10 (including).
 // Use `Math.floor()` and `Math.random()` to do that.
 // `Math.random()` generates a random number between 0 and 1 (not including 1).
 
 const random = Math.floor(Math.random() * (10)) + 50;
+
+console.log('Exercise 13:');
 console.log(random);
