@@ -85,8 +85,6 @@ console.log(sentence.replace('bad', 'good'));
 // 11. Repeat a String (H)
 // Create a visual separator for console output. Expected result: "--------------------"
 
-const expression = 'hey';
-console.log(expression.repeat(3));
 
 // 12. Check if String Starts With (H)
 // Check if a file name starts with a specific prefix. Return true or false.
