@@ -166,13 +166,8 @@ const usersExercise4 = [
     email: "sophia@example.com",
   },
 ];
-const userBelow25 = usersExercise4.filter(user => {
-	if (user.age >= 25) {
-		return true;
-	} else {
-		return false;
-	}
-});
+const userBelow25 = usersExercise4.filter(user => user.age < 25);
+
 console.log('usersExercise4 : '+userBelow25);
 
 // Exercise 5:
@@ -367,10 +362,10 @@ const studentsExercise9 = [
     grade: "B-",
   },
 ];
-const filteredStudentsWithC=studentsExercise9.filter(student => {
-  return student.grade !== "D+" && student.grade !== "D" && student.grade !== "F";
-});
-console.log('studentsExercise9 : '+filteredStudentsWithC);
+const lowGrades = ['C-', 'D+', 'D', 'D-', 'E+', 'E', 'E-'];
+const studentsWithGradesBelowC = studentsExercise9.filter(student => lowGrades.includes(student.grade.toUpperCase()));
+
+console.log('studentsExercise9 : '+studentsWithGradesBelowC);
 // Exercise 10:
 // Given an array of user objects, filter out the users who have a name starting with the letter "J".
 const usersExercise10 = [
@@ -435,5 +430,7 @@ const usersExercise10 = [
     email: "sophia@example.com",
   },
 ];
-const filteredByStartLetter=usersExercise10.filter(user =>user.name[0] !=="J");
+const filteredByStartLetter=usersExercise10.filter(user =>user.name[0].toLowerCase !=="j");
 console.log('usersExercise10 : '+filteredByStartLetter);
+
+
