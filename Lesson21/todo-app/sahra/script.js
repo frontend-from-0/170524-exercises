@@ -1,7 +1,9 @@
 document
   .getElementById("todoForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault();});
+    event.preventDefault();
+    addItem();
+  });
 
   const todoInputElement = document.getElementById("todoInput");
   const toDoListElement = document.getElementById("toDoList");
