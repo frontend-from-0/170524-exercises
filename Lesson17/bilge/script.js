@@ -134,6 +134,11 @@ const obj = { a: 10, b: 20, c: 30, d: 23 };
 
 console.log('Ex. 11: ');
 
+let sumOfTheObjectValues = 0;
+
 for ( const key in obj){
   console.log(`${key}: ${obj[key]}`);
+  sumOfTheObjectValues += obj[key];
 }
+
+console.log('Sum of the object values:', sumOfTheObjectValues);
