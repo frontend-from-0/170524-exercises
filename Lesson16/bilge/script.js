@@ -41,7 +41,7 @@ console.log(compareNumbers(1, 50));
 // 4. Write a function that takes in a string and checks if the first letter is uppercase using if else statement.
 function isFirstLetterUpperCase(string) {
 	const firstLetter = string.charAt(0); // string[0]
-  if (string.length <= 0 || typeof string === 'String') 
+  if (string.length <= 0 || typeof string !== 'string') 
 		return 'Invalid input value';
 
 	if (firstLetter === firstLetter.toUpperCase()) {
@@ -189,10 +189,10 @@ console.log(checkVoteEligibility(70, false));
 // 11. Write a function that asks the user to enter their salary and their years of experience. If the salary is less than $30,000 and the years of experience are less than 5, print "Sorry, we cannot offer you the job at this time". If the salary is less than $50,000 and the years of experience are between 5 and 10 (inclusive), print "We can offer you the job at a lower salary". If the salary is greater than or equal to $50,000 or the years of experience are greater than or equal to 10, print "We can offer you the job at the requested salary".
 
 function decideTheSalaryOnExperience (salary, yearsOfExperience) {
-  if (salary < 30.000 && yearsOfExperience <5) {
+  if (salary < 30000 && yearsOfExperience <5) {
     return 'Sorry, we cannot offer you the job at this time.'
   }
-  else if (salary < 50.000 && 5 <= yearsOfExperience <= 10) {
+  else if (salary < 50000 && 5 <= yearsOfExperience <= 10) {
     return 'We can offer you the job at a lower salary.'
   }
   else {
@@ -202,9 +202,9 @@ function decideTheSalaryOnExperience (salary, yearsOfExperience) {
 
 console.log('Ex. 11:');
 
-console.log(decideTheSalaryOnExperience(25.000, 4));
-console.log(decideTheSalaryOnExperience(45.000, 10));
-console.log(decideTheSalaryOnExperience(50.000, 13));
+console.log(decideTheSalaryOnExperience(25000, 4));
+console.log(decideTheSalaryOnExperience(45000, 10));
+console.log(decideTheSalaryOnExperience(50000, 13));
 
 // 12. Write a function that asks the user to enter their score on a test. If the score is less than 60, print "You failed the test". If the score is between 60 and 70 (inclusive), print "You passed the test, but your grade is not great". If the score is between 71 and 80 (inclusive), print "You got a B". If the score is between 81 and 90 (inclusive), print "You got an A". If the score is greater than 90, print "You got an A+ - Great job!".
 
@@ -289,17 +289,18 @@ console.log(checkIfTheGradeIsPassing('F'));
 
 // 15. Write a function that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
 
-function findAgeInDogYears (dogYears) {
-  const humanYears = 7 * dogYears;
-  if (humanYears > 0) {
+
+function findAgeInDogYears (age) {  // I changed the parameter to 'age'; which makes more sense as we'll pass the age to find its equivalence in dog years
+  const dogYears = age / 7 ; // Then I declared the dogYears parameter in relation to age
+  if (age <= 0) {    // I only checked if the age is positive; because it's our parameter
+    return 'Invalid input. Age should be specified as a positive number.'}
+  else {    
     return `Your age is ${dogYears} in dog years.`
-  }
-  else 
-    return 'Invalid input'
+  }      
 }
 
 console.log('Ex. 15:');
 
 console.log(findAgeInDogYears(-10));
 console.log(findAgeInDogYears(0));
-console.log(findAgeInDogYears(20));
+console.log(findAgeInDogYears(14));
