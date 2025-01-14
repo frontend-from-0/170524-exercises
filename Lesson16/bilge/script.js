@@ -289,12 +289,12 @@ console.log(checkIfTheGradeIsPassing('F'));
 
 // 15. Write a function that asks the user to enter their age, and then calculates and displays their age in dog years (where one human year is equivalent to seven dog years). If the user enters a negative number or zero, display an error message.
 
-
-function findAgeInDogYears (age) {  // I changed the parameter to 'age'; which makes more sense as we'll pass the age to find its equivalence in dog years
-  const dogYears = age / 7 ; // Then I declared the dogYears parameter in relation to age
-  if (age <= 0) {    // I only checked if the age is positive; because it's our parameter
+function findAgeInDogYears (age) {  // Changed the parameter to 'age'; which makes more sense as we'll pass the age to find its equivalence in dog years
+  
+  if (age <= 0) {    // Only checked if the age is positive; because it's our parameter    
     return 'Invalid input. Age should be specified as a positive number.'}
   else {    
+    const dogYears = age / 7 ; // Then declared the dogYears parameter in relation to age
     return `Your age is ${dogYears} in dog years.`
   }      
 }
