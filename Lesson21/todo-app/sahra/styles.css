@@ -23,7 +23,12 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   max-width: 600px;
 }
-
+.todo-form label{
+  color: var(--beige-mist);
+  padding: 20px 0px;
+  font-size: 21px;
+  font-weight: 500;
+}
 h1 {
   text-align: center;
   color: var(--beige-mist);
@@ -34,28 +39,32 @@ form {
   flex-direction: column;
   margin-bottom: 20px;
 }
-
-input[type="text"].todo-form-item {
-  flex: 1;
-  padding: 10px 15px; 
-  font-size: 16px;
-  background: transparent;
-  color: var(--beige-mist);
-  margin-bottom: 10px;
-  border: 1px solid var(--beige-mist);
+.todo-form-item {
+  line-height: 21px;
+  padding: 20px;
   border-radius: 5px;
+  margin-bottom: 10px;
+  background: var(--charcoal-black);
+  color: var(--beige-mist);
+  border: 1px solid var(--beige-mist);
+  font-size: 21px;
 }
-
 
 button[type="submit"] {
   padding: 10px 20px;
   font-size: 16px;
   background-color: var(--beige-mist);
+  border: 3px solid var(--remove-icon);
   color: var(--charcoal-black);
-  border: none;
   border-radius: 5px;
   margin: 0px;
   cursor: pointer;
+  width: 50%;
+}
+button:hover{
+  background-color: var(--rose-quartz);
+  border: 3px solid var(--beige-mist);
+  color: var(--remove-icon);
 }
 ul {
   padding: 0px;

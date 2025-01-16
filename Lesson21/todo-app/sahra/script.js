@@ -18,7 +18,7 @@ document
       span.innerHTML = "\u00d7";
       toDoListItemElement.appendChild(span);
     }
-    todoInputElement.value.trim() === '';
+    todoInputElement.value.trim() = '';
     //to save data
     saveData();
   }
