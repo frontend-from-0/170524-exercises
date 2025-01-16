@@ -166,7 +166,7 @@ const usersExercise4 = [
     email: "sophia@example.com",
   },
 ];
-const userAge = usersExercise4.filter(user => {
+const usersBelow25 = usersExercise4.filter(user => {
   if (typeof user.age === 'number') {
     return user.age < 25;
   } else {
@@ -177,7 +177,7 @@ const userAge = usersExercise4.filter(user => {
     return false;
   }
 });
-console.log(userAge);
+console.log(usersBelow25);
 // Exercise 5:
 // Given an array of sentences, filter out the sentences that have more than 10 words.
 const sentencesExercise5 = [
@@ -202,14 +202,14 @@ const sentencesExercise5 = [
   "The aroma of freshly brewed coffee permeated the air, enticing passersby to indulge in a cup of warmth.",
   "The butterfly gracefully fluttered its wings, showcasing vibrant colors in a delicate dance.",
 ];
-const countWords = sentencesExercise5.filter(sentence => {
+const longWords = sentencesExercise5.filter(sentence => {
   if (sentence.split(/\s+/).filter(word => word.trim().length > 0).length > 10){
     return sentence;
   } else{
     return console.log("less than 10 words");
   }
 });
-console.log(countWords);
+console.log(longWords);
 
 // Exercise 6:
 // Given an array of products, filter out the products that are out of stock (where the quantity is 0).
@@ -305,8 +305,8 @@ const wordsExercise8 = [
   "jungle",
 ];
 
-const countCharacters = wordsExercise8.filter(word =>(word.length > 5));
-console.log(countCharacters);
+const longStrings = wordsExercise8.filter(word =>(word.length > 5));
+console.log(longStrings);
 
 // Exercise 9:
 // Given an array of objects representing students, filter out the students who have a grade lower than C.
@@ -456,6 +456,6 @@ const usersExercise10 = [
   },
 ];
 const userNamesStartsWithJ = usersExercise10.filter(user =>
-user.name.startsWith("J")
+user.name.toUpperCase().startsWith("J")
 );
 console.log(userNamesStartsWithJ);
