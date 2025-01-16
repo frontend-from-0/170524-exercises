@@ -27,7 +27,6 @@ window.addEventListener("load", function () {
     console.log("Prev button clicked");
   }
 
-
   const carouselIntervalId = setInterval(handleNextClick, 3000);
 
   // Example of clearing interval. Will not work as the moment since we haven't added a stopButton element yet.

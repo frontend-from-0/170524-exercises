@@ -70,3 +70,27 @@
 .indicator.active {
   background-color: #555;
 }
+.carousel-stostanavigation {
+  position: absolute;  
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+.carousel-btn-transparent {
+  border-radius: 50%;
+  /* width: 40px;
+  height: 40px; */
+  border: none;
+  font-size: 36px;
+  padding: 10px 20px;
+  color: #242424;
+  opacity: 0.5;
+}
