@@ -17,6 +17,7 @@ document
       let span = document.createElement("span");
       span.innerHTML = "\u00d7";
       toDoListItemElement.appendChild(span);
+      todoInputElement.value = '';
     }
     todoInputElement.value.trim() = '';
     //to save data
