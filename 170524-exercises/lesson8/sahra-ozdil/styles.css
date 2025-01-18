@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color: #fbd3a3;
+    color: #462b02;
+}
