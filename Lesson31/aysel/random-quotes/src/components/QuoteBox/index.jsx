@@ -5,7 +5,8 @@ export function QuoteBox({ quote, author, onNewQuoteClick, likeCount, dislikeCou
         <div>
           <p>{quote}</p>
           <span>{author}</span>
-          <div>
+          <div className='flex-column'>
+          <div className="flex-row">
             <button onClick={onLikeClick}>
               <span>👍</span> Like {likeCount}
             </button>
@@ -13,11 +14,14 @@ export function QuoteBox({ quote, author, onNewQuoteClick, likeCount, dislikeCou
               <span>👎</span> Dislike {dislikeCount}
             </button>
           </div>
+
+          <button onClick={onNewQuoteClick}>
+            <span>✨</span> New Quote
+          </button>
         </div>
-        <button onClick={onNewQuoteClick}>
-          <span>✨</span> New Quote
-        </button>
-      </>
+        </div>
+        </>
+
     );
   }
   
