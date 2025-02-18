@@ -34,7 +34,7 @@ const userEx9 = {
   },
 };
 
-const ex9UserCity = userEx9?.profile?.address ?? "Unknown";
+const ex9UserCity = userEx9?.profile?.address?.country ?? "Unknown";
 console.log(ex9UserCity);
 
 // 10. Optional Chaining with Function Calls
@@ -68,10 +68,7 @@ const config = {
   timeout: null,
 };
 
-const timeout =
-  config.timeout !== undefined && config.timeout !== null
-    ? config.timeout
-    : 3000;
+ config.timeout ?? 3000;
 
 console.log(timeout); // 3000
 
