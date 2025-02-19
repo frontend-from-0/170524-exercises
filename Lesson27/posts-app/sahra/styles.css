@@ -14,6 +14,11 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
 h1 {
   text-align: center;
@@ -24,13 +29,13 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-.posts-container{
+.posts-container {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 .post {
-  background:transparent;
+  background: transparent;
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 20px;
@@ -51,7 +56,7 @@ ul {
 
 .buttons-container {
   margin: 30px 0 0 0;
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
@@ -74,7 +79,6 @@ ul {
 .button--success:hover {
   background-color: #167df4;
 }
-
 
 .button--danger {
   background-color: #7a0916;

@@ -66,6 +66,7 @@ function updatePost() {
     .then((json) => {
       console.log("Post updated successfully:", json);
       errorBtn.classList.remove("button--danger");
+      window.location.href = "./index.html";
     })
 
     .catch((error) => {
