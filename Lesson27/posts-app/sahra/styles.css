@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #c9c8c8;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.posts-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post {
+  background: transparent;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #3f3f3f;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #dedede;
+  margin: 0 0 10px;
+}
+
+.post-body {
+  color: #dedede;
+  margin: 0;
+}
+
+.buttons-container {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button--success {
+  background-color: #167df4;
+}
+
+.button--success:hover {
+  background-color: #167df4;
+}
+
+.button--danger {
+  background-color: #7a0916;
+}
+
+.button--danger:hover {
+  background-color: #79000cf4;
+}
