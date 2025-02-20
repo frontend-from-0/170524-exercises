@@ -7,20 +7,27 @@ import { Title } from "./components/Title";
 function App() {
   const [quotes, setQuotes] = useState(quotesData);
   const [quoteIndex, setQuoteIndex] = useState(0);
-  const [likeCount, setLikeCount] = useState(0);
-  const [dislikeCount, setDisLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState({});
+  const [dislikeCount, setDisLikeCount] = useState({});
   const getRandomQuoteIndex = () => Math.floor(Math.random() * quotes.length);
 
   function handleNewQuoteClick() {
-    setQuoteIndex(getRandomQuoteIndex());
+    const newIndex = getRandomQuoteIndex();
+    setQuoteIndex(newIndex);
   }
 
   function handleLikeClick() {
-    setLikeCount((count) => count+1);
+    setLikeCount((prev) => ({
+      ...prev,
+      [quoteIndex]: (prev[quoteIndex] || 0) + 1,
+    }));
   }
 
   function handleDislikeClick() {
-    setDislikeLikeCount((count) => count+1);
+    setDisLikeCount((prev) => ({
+      ...prev,
+      [quoteIndex]: (prev[quoteIndex] || 0) + 1,
+    }));
   }
 
   return (
@@ -30,11 +37,12 @@ function App() {
         quote={quotes[quoteIndex].quote}
         author={quotes[quoteIndex].author}
         onNewQuoteClick={handleNewQuoteClick}
+        onLikeClick={handleLikeClick}
+        onDislikeClick={handleDislikeClick}
+        likeCount={likeCount[quoteIndex] || 0} 
+        dislikeCount={dislikeCount[quoteIndex] || 0} 
       />
-      <div className="buttons">
-        <button onClick={handleLikeClick} className="like-button"> Like ({likeCount}) </button>
-        <button onClick={handleDislikeClick} className="dislike-button"> Dislike ({dislikeCount}) </button>
-      </div>
+      
     </div>
   );
 }
