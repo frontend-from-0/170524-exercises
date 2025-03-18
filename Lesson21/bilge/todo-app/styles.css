@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: #f8f8f8;
+  background-color: #908282;
   font-family: Arial, sans-serif;
 }
 
@@ -20,11 +20,22 @@ body {
 h1 {
   text-align: center;
   color: #333;
+  font-size: 1.75rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 2rem;
+}
+
+h2 {
+  text-align: left;  
+  color: rgba(51, 51, 51, 0.83);
+  font-size: 1rem;
+  margin: 2rem 0;
 }
 
 form {
   display: flex;
   margin-bottom: 20px;
+  flex-direction: row;
 }
 
 input[type="text"] {
@@ -32,18 +43,28 @@ input[type="text"] {
   padding: 10px;
   font-size: 16px;
   border: none;
-  border-bottom: 2px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #ddd; 
+  background: transparent;
+  margin-right: 10px;
 }
+
 
 button[type="submit"] {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #333;
+  background-color: #383131;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  margin-left: 10px;
-  cursor: pointer;
+  border-radius: 20px;
+  display: inline;
+  cursor: pointer;  
+}
+
+button[type="submit"]:hover {
+  background-color: #b2b2b2;
+  color: #000;
 }
 
 ul {
@@ -65,22 +86,29 @@ li:last-child {
   border-bottom: none;
 }
 
+
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
-}
-
-.button--light {
-  background-color: #fff;
-  border: none;
-}
-
-.button--light:hover {
-  cursor: pointer;
 }
 
 .btn-delete {
   text-decoration: none;
   background-color: #c90d0d;
   color: #fff;
+  border-radius: 5px;
+  border-color: #c90d0d;
+  font-size: 1rem;
+  padding: 3px 10px;
+  margin-right: 40px;
 }
+
+.btn-delete:hover {
+  background-color: #f06565;
+  color: #373737;
+}
+
+.invisible {
+  opacity: 0;
+}
+

@@ -7,17 +7,60 @@ document
 
     const toDoListItemElement = document.createElement("li"); // Node
     toDoListItemElement.textContent = todoInputElement.value;
+    
+
+    /* Task 3:
+    const errorMessageElement = document.createElement("errorMessage"); // Assuming you have an element to display errors
+
+     if (todoInputElement.value === '') {
+      errorMessageElement.textContent = 'You cannot add an empty item. Please enter a valid todo.';
+      return; // Exit the function if the input is invalid
+    } else if ((todoInputElement.value).length < 3) {
+      errorMessageElement.textContent = 'You should type items longer than 3 letters.';
+      return; // Exit the function if the input is invalid
+    } else {
+      errorMessageElement.textContent = ''; // Clear any previous error messages
+    } 
+    */
 
     const toDoListElement = document.getElementById("toDoList");
     toDoListElement.appendChild(toDoListItemElement);
+    
+
+    //Task 2:
+
+    const listItemText = document.createElement('span');
+    listItemText.textContent = todoInputElement.value;
+    
 
     toDoListElement.addEventListener(
       'click',
-      function() {
-        toDoListElement.classList.toggle('completed');
+      function(e) {      
+        if(e.target.tagName === 'li') {
+          e.target.classList.toggle('completed'); 
+        } else if(e.target.tagName === 'span') {
+          e.target.parentElement.remove();
+        }                   
       }
     );
 
+    toDoListItemElement.appendChild(listItemText);
+   
+
+
+    /* toDoListElement.addEventListener (
+        'click', function(e) {
+          if(e.target.tagName === 'li') {
+            e.target.classList.toggle('completed');
+          } else if(e.target.tagName === 'span') {
+            e.target.parentElement.remove();
+          }
+        }
+      ); 
+    */
+
+
+    // Task 1:
     const btnDelete = document.createElement('button');
     btnDelete.textContent = 'X';
     toDoListItemElement.appendChild(btnDelete);
