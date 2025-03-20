@@ -12,7 +12,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   max-width: 600px;
 }
@@ -51,18 +51,19 @@ input[type="text"] {
 }
 
 
-button[type="submit"] {
+button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #383131;
   color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
   display: inline;
   cursor: pointer;  
+  text-decoration: none;
 }
 
-button[type="submit"]:hover {
+button:hover {
   background-color: #b2b2b2;
   color: #000;
 }
@@ -86,29 +87,26 @@ li:last-child {
   border-bottom: none;
 }
 
-
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
 .btn-delete {
-  text-decoration: none;
-  background-color: #c90d0d;
+  padding: 10px 15px;
+  font-size: 12px;
+  background-color: #e41e1e;
   color: #fff;
-  border-radius: 5px;
-  border-color: #c90d0d;
-  font-size: 1rem;
-  padding: 3px 10px;
-  margin-right: 40px;
+  border: none;
+  border-radius: 15px;
+  display: inline;
+  cursor: pointer;  
+  text-decoration: none;
 }
 
 .btn-delete:hover {
-  background-color: #f06565;
-  color: #373737;
+  background-color: #d66565;
+  color: #000;
 }
 
-.invisible {
-  opacity: 0;
-}
 
