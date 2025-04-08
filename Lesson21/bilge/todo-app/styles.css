@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #908282;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.75rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 2rem;
+}
+
+.error {
+  color: rgb(226, 33, 33);
+  font-size: 1.2 rem;
+
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  color: rgba(51, 51, 51, 0.83);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #ddd; 
+  background: transparent;
+}
+
+.submitBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #383131;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  display: inline;
+  cursor: pointer;  
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #b2b2b2;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.btn-delete {
+  padding: 10px 15px;
+  font-size: 12px;
+  background-color: #e41e1e;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  display: inline;
+  cursor: pointer;  
+  text-decoration: none;
+}
+
+.btn-delete:hover {
+  background-color: #d66565;
+  color: #000;
+}
+
+
