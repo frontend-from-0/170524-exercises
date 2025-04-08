@@ -7,11 +7,14 @@
   <body>
     <main class="container">
       <h1>To-do List</h1>
-      <h2>You may add your to-do items below:</h2>
+      
       <form class="todo-form" id="todoForm">              
-        <label for="todoInput"></label>        
-        <input type="text" placeholder="Add to-do item" id="todoInput" />
-        <button type="submit">Add</button> 
+        <label for="todoInput">You may add your to-do items below:</label>  
+        <div class="error"></div>      
+        <div class="input-group">
+          <input type="text" placeholder="Add to-do item" id="todoInput" />
+          <button type="submit" class="submitBtn">Add</button> 
+        </div>
       </form>      
       <ul id="toDoList"></ul>
     </main>
