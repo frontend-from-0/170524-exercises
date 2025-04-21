@@ -48,11 +48,11 @@ function getPosts() {
         updateButton.href = `./update-post.html?id=${post.id}`;
         
         // Add delete button
-
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete post';
         deleteButton.classList.add('button', 'button--success');
 
+        deleteButton.addEventListener('click', () => deletePosts(post.id, listItem));
 
         buttons.appendChild(updateButton);
         buttons.appendChild(deleteButton);
@@ -66,10 +66,19 @@ function getPosts() {
     });
 }
 
+// Make an API request to delete the post with the given ID (DELETE request)
 
-deleteButton.addEventListener('click', deletePost);
-
-function deletePost() {
-  // Make an API request to delete the post with the given ID (DELETE request)
-  
+function deletePosts(postId, listItem) {
+    console.log('Deleting post with ID:', postId);
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: 'DELETE',
+    })
+    .then((response) => {
+        if (response.ok) {
+            console.log('Removing post from DOM:', postId);
+            listItem.remove();
+        } else {
+            alert('Error deleting post');
+        }
+    });
 }
